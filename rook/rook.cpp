@@ -57,27 +57,17 @@ int main()
     	if (yline_min<kxy[0].ky)
     	{
     		yline_min=kxy[0].ky;
-    		sum=
     	}
     }
 
-    if (yline_min==kxy[0].ky)
+    else if (yline_min==kxy[0].ky)
     {
     	if (xline_min<kxy[0].kx)
     	{
     		xline_min=kxy[0].kx;
     	}
     }
-    
-    // search
-    for (int i=; i<8; i++)
-    {
-    	for (int j=0; j<8; j++)
-    	{
 
-    	}
-    	cout << "\n";
-    } 
 
     
 

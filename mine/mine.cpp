@@ -5,7 +5,7 @@ using namespace std;
  
 int n,m;
 int x,y;
-int arr[101][101]={0, };
+int arr[101][101];
 int mine_x[9]={-1,-1,-1,0,0,0,1,1,1};
 int mine_y[9]={-1,0,1,-1,0,1,-1,0,1};
 

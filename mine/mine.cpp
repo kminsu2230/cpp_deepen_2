@@ -5,22 +5,22 @@ using namespace std;
  
 int n,m;
 int x,y;
-int arr[101][101];
+int arr[106][106];
 int mine_x[9]={-1,-1,-1,0,0,0,1,1,1};
 int mine_y[9]={-1,0,1,-1,0,1,-1,0,1};
 
+int sum=0;
+
 int mine_num (int arr_x, int arr_y)
 {
-	int sum=0;
-	int touch_mine=0;
-
+	sum=0;
 	for (int j=0; j<9; j++)
 	{
 		if (mine_x[j]==0 and mine_y[j]==0)
 		{	
 			if (arr[arr_x+(mine_x[j])][arr_y+(mine_y[j])]==1)
 			{
-				touch_mine = 1;
+				return false;
 			}
 		}
 		else 
@@ -31,16 +31,7 @@ int mine_num (int arr_x, int arr_y)
 			}
 		}
 	}
-
-	if (touch_mine==1)
-	{
-		return -1;
-	}
-	else
-	{
-		return sum;
-	}
-
+	return true;
 }
 
 
@@ -66,17 +57,17 @@ int main ()
 			cin >> arr[i][j]; 
 		}
 	}
-	int value=0;
+	bool value=0;
 
 	value = mine_num(x,y);
 
-	if (value>=0)
+	if (value==false)
 	{
-		cout << value << "\n";
+		cout << "game over" << "\n";
 	}
 	else
 	{
-		cout << "game over" <<"\n";
+		cout << sum <<"\n";
 	}
 
 	
